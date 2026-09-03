@@ -1,0 +1,68 @@
+:root {
+    --bg-dark: #1E293B;
+    --nav-bg: #0F172A;
+    --main-bg: #D8E2DC;
+    --aside-bg: #F4F1EA;
+    --text-light: #F8FAFC;
+    --text-dark: #2C3E35;
+    --font-family: system-ui, -apple-system, sans-serif;
+}
+
+body {
+    margin: 0;
+    font-family: var(--font-family);
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    
+    display: grid;
+    grid-template-rows: auto auto 1fr auto;
+    min-height: 100vh;
+}
+
+.header {
+    background-color: var(--bg-dark);
+    padding: 1.5rem 2rem;
+}
+
+.nav-container {
+    background-color: var(--nav-bg);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+.nav-container a {
+    text-decoration: none;
+    color: var(--text-light);
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.nav-container a:hover {
+    color: #A3B18B;
+}
+
+.holy-grail-layout {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    flex: 1;
+}
+
+.main-content {
+    background-color: var(--main-bg);
+    color: var(--text-dark);
+    padding: 2rem;
+}
+
+.aside-content {
+    background-color: var(--aside-bg);
+    color: var(--text-dark);
+    padding: 2rem;
+}
+
+.footer {
+    background-color: var(--bg-dark);
+    text-align: center;
+    padding: 2rem;
+}
