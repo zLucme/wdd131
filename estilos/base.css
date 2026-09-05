@@ -13,19 +13,20 @@ body {
 
 header {
     background-color: #1e293b;
-    color: white;
+    color: #ffffff;
     text-align: center;
     padding: 1.5rem 0;
 }
 
-header h1 {
-    font-size: 1.3rem;
-    font-weight: 400;
+header p {
+    font-size: 1.1rem;
     margin: 0;
+    padding: 0 1rem;
 }
 
 nav {
     background-color: #0f172a;
+    margin-top: 1rem;
 }
 
 nav ul {
@@ -39,7 +40,7 @@ nav ul {
 
 nav a {
     display: block;
-    color: white;
+    color: #ffffff;
     text-decoration: none;
     padding: 14px 20px;
     font-size: 1rem;
@@ -86,7 +87,7 @@ main > h1 {
 
 .card h2 {
     background-color: #1d4ed8;
-    color: white;
+    color: #ffffff;
     text-align: center;
     margin: 0;
     padding: 0.8rem;
@@ -180,7 +181,7 @@ figcaption {
 
 footer {
     background-color: #1e293b;
-    color: white;
+    color: #ffffff;
     text-align: center;
     padding: 1.5rem;
     margin-top: 2rem;
