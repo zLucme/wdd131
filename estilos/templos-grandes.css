@@ -1,0 +1,24 @@
+header {
+    padding: 1rem 2rem;
+}
+
+#menu {
+    display: none;
+}
+
+nav {
+    display: flex !important;
+    position: static;
+    flex-direction: row;
+    width: auto;
+    background-color: transparent;
+    box-shadow: none;
+}
+
+nav a {
+    padding: 0.5rem 1rem;
+}
+
+.resgrid {
+    grid-template-columns: repeat(3, 1fr);
+}
