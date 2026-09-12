@@ -151,3 +151,9 @@ footer {
     font-size: 0.9rem;
     box-shadow: 0 -4px 15px rgba(124, 58, 237, 0.4);
 }
+
+nav a:hover,
+nav a:focus {
+    background-color: #7c3aed;
+    outline: none;
+}
