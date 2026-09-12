@@ -83,6 +83,7 @@ nav {
     width: 100%;
     background-color: #4c1d95;
     box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+    z-index: 100;
 }
 
 nav.open {
@@ -97,8 +98,10 @@ nav a {
     transition: background 0.3s;
 }
 
-nav a:hover {
+nav a:hover,
+nav a:focus {
     background-color: #7c3aed;
+    outline: none;
 }
 
 main {
@@ -131,7 +134,8 @@ figure {
 
 figure img {
     width: 100%;
-    height: auto;
+    height: 167px;
+    object-fit: cover;
     display: block;
     border-radius: 2px;
 }
@@ -150,10 +154,4 @@ footer {
     margin-top: 2rem;
     font-size: 0.9rem;
     box-shadow: 0 -4px 15px rgba(124, 58, 237, 0.4);
-}
-
-nav a:hover,
-nav a:focus {
-    background-color: #7c3aed;
-    outline: none;
 }
