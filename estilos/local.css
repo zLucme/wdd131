@@ -10,6 +10,8 @@
     --accent-color: #ffffff;
     --bg-color: #f8fafc;
     --text-color: #0f172a;
+    --border-color: #94a3b8;
+    --clock-color: #fde047;
 }
 
 body {
@@ -80,17 +82,17 @@ ul li {
     align-items: center;
     padding: 0.35rem 0;
     font-size: 0.9rem;
-    border-bottom: 1px solid #94a3b8;
+    border-bottom: 1px solid var(--border-color);
 }
 
 ul li span:first-child {
     font-weight: 700;
-    color: #0f172a;
+    color: var(--text-color);
     text-align: left;
 }
 
 ul li span:last-child {
-    color: #1e293b;
+    color: var(--primary-color);
     text-align: right;
 }
 
@@ -108,7 +110,7 @@ ul li span:last-child {
 footer {
     text-align: center;
     background-color: var(--primary-color);
-    color: #ffffff;
+    color: var(--accent-color);
     padding: 0.8rem 0.4rem;
     font-size: 0.78rem;
     margin-top: 1.0rem;
@@ -118,12 +120,13 @@ footer {
 footer p {
     margin: 0.3rem 0;
     white-space: normal;
+    color: var(--accent-color);
 }
 
 #hora-montemor,
 #hora-seattle,
 #hora-utc,
 #hora-brasilia {
-    color: #fde047;
+    color: var(--clock-color);
     font-weight: 700;
 }
