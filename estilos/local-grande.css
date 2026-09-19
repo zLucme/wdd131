@@ -1,0 +1,87 @@
+@media (min-width: 768px) {
+    body {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
+
+    header h1 {
+        font-size: 1.3rem;
+    }
+
+    .grid-container {
+        position: relative;
+        width: 100%;
+        flex: 1;
+        margin: 0;
+        padding: 0;
+        display: block;
+    }
+
+    .image-box {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .image-box picture,
+    .image-box img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+    .data-section {
+        position: absolute;
+        top: 20px;
+        left: 30px;
+        width: 290px;
+        background-color: rgba(255, 255, 255, 0.9);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        z-index: 10;
+        padding: 0.8rem;
+    }
+
+    .weather-section {
+        position: absolute;
+        bottom: 20px;
+        right: 30px;
+        width: 290px;
+        background-color: rgba(255, 255, 255, 0.9);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        z-index: 10;
+        padding: 0.8rem;
+    }
+
+    .weather-section h2 {
+        text-align: center;
+        margin-bottom: 0.5rem;
+    }
+
+    .weather-section h2::after {
+        content: " ⛅";
+        font-size: 1rem;
+    }
+
+    .weather-icon {
+        display: none;
+    }
+
+    footer {
+        margin-top: auto;
+        position: relative;
+        z-index: 10;
+        padding: 0.5rem;
+        font-size: 0.75rem;
+        white-space: normal;
+    }
+
+    footer p {
+        white-space: normal;
+    }
+}

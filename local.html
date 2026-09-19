@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Página dedicada a Seattle, explorando dados gerais, tecnologia, inovação e as condições meteorológicas em tempo real.">
+    <title>Seattle - Tecnologia e Inovação</title>
+    <link rel="stylesheet" href="estilos/local.css">
+    <link rel="stylesheet" href="estilos/local-grande.css">
+    <script src="scripts/local.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Seattle: Polo Tecnológico</h1>
+    </header>
+
+    <main class="grid-container">
+        <div class="image-box">
+            <picture>
+                <source media="(min-width: 768px)" srcset="imagens/ampla.WebP">
+                <img src="imagens/movel.WebP" alt="Seattle Skyline" width="600" height="400" fetchpriority="high">
+            </picture>
+        </div>
+
+        <section class="data-section">
+            <h2>Dados</h2>
+            <ul>
+                <li><span>País:</span> <span>Estados Unidos</span></li>
+                <li><span>Estado:</span> <span>Washington</span></li>
+                <li><span>População:</span> <span>~749 mil</span></li>
+                <li><span>Fundação:</span> <span>1851</span></li>
+                <li><span>Área:</span> <span>369 km²</span></li>
+                <li><span>Foco:</span> <span>Software & Cloud</span></li>
+            </ul>
+        </section>
+
+        <section class="weather-section">
+            <h2>Clima</h2>
+            <div class="weather-icon">
+                <img src="imagens/clima.svg" alt="Ícone de Clima" width="48" height="48">
+            </div>
+            <ul>
+                <li><span>Temperatura:</span> <span><span id="temp">12</span>°C</span></li>
+                <li><span>Condição:</span> <span>Parcialmente Nublado</span></li>
+                <li><span>Velocidade do Vento:</span> <span><span id="wind">15</span> km/h</span></li>
+                <li><span>Sensação Térmica:</span> <span><span id="windchill">N/A</span></span></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> 🖥️ Lucas Mendes de Araújo 🖥️ | Monte Mor, São Paulo - Brasil (UTC-3) - <span id="hora-montemor">--:--:--</span></p>
+        <p>Desejo Visitar: Seattle, Washington - Estados Unidos (UTC-7) | Hora: <span id="hora-seattle">--:--:--</span></p>
+        <p>Horário Universal (UTC): <span id="hora-utc">--:--:--</span> | Horário de Brasília: <span id="hora-brasilia">--:--:--</span></p>
+        <p>Última modificação: <span id="lastModified"></span></p>
+    </footer>
+</body>
+</html>

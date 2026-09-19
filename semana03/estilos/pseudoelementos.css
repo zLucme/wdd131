@@ -1,0 +1,29 @@
+:root {
+	--bord: 1px solid #777;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+main {
+	margin: 0;
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	padding: 0.5rem;
+	width: 760px;
+	background-color: #eee;
+}
+
+ol li::marker {
+	content: "✔";
+	color: navy;
+	font-size: 2rem;
+}
