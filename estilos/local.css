@@ -10,6 +10,7 @@
     --accent-color: #ffffff;
     --bg-color: #f8fafc;
     --text-color: #0f172a;
+    --subtext-color: #1e293b;
     --border-color: #94a3b8;
     --clock-color: #fde047;
 }
@@ -24,13 +25,15 @@ header {
     background-color: var(--primary-color);
     color: var(--accent-color);
     text-align: center;
-    padding: 0.5rem;
-    border-bottom: 3px solid var(--secondary-color);
+    padding: 0.8rem;
+    border-bottom: 4px solid var(--secondary-color);
 }
 
 header h1 {
-    font-size: 1.2rem;
+    font-size: 1.8rem;
+    font-weight: 700;
     margin: 0;
+    letter-spacing: 1px;
 }
 
 .grid-container {
@@ -65,7 +68,7 @@ section {
 h2 {
     text-align: center;
     color: var(--primary-color);
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     margin-top: 0;
     margin-bottom: 0.5rem;
 }
@@ -92,7 +95,7 @@ ul li span:first-child {
 }
 
 ul li span:last-child {
-    color: var(--primary-color);
+    color: var(--subtext-color);
     text-align: right;
 }
 
