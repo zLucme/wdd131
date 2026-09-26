@@ -121,7 +121,6 @@ h1 {
     display: grid;
     grid-template-columns: 1fr;
     gap: 1.5rem;
-    min-height: 400px;
 }
 
 figure {
@@ -135,8 +134,7 @@ figure {
 
 figure img {
     width: 100%;
-    height: auto;
-    aspect-ratio: 16 / 10;
+    height: 167px;
     object-fit: cover;
     display: block;
     border-radius: 2px;

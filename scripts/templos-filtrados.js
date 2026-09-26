@@ -15,53 +15,53 @@ hambutton.addEventListener('click', () => {
 
 const templos = [
   {
-    nomeDoTemplo: "Aba Nigéria",
+    nomeDoTemplo: "Aba Nigeria",
     localizacao: "Aba, Nigéria",
     consagracao: "2005, 7 de agosto",
     area: 11500,
-    urlDaImagem: "imagens/aba_nigeria.jpg"
+    urlDaImagem: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/aba-nigeria/400x250/aba-nigeria-temple-lds-273999-wallpaper.jpg"
   },
   {
     nomeDoTemplo: "Manti Utah",
     localizacao: "Manti, Utah, Estados Unidos",
     consagracao: "1888, 21 de maio",
     area: 74792,
-    urlDaImagem: "imagens/utah_manti.jpg"
+    urlDaImagem: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/manti-utah/400x250/manti-temple-768192-wallpaper.jpg"
   },
   {
     nomeDoTemplo: "Payson Utah",
     localizacao: "Payson, Utah, Estados Unidos",
     consagracao: "2015, 7 de junho",
     area: 96630,
-    urlDaImagem: "imagens/utah_payson.jpg"
+    urlDaImagem: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/payson-utah/400x225/payson-utah-temple-exterior-1416671-wallpaper.jpg"
   },
   {
     nomeDoTemplo: "Yigo Guam",
     localizacao: "Yigo, Guam",
     consagracao: "2020, 2 de maio",
     area: 6861,
-    urlDaImagem: "imagens/yigo_guam.jpg"
+    urlDaImagem: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/yigo-guam/400x250/yigo_guam_temple_2.jpg"
   },
   {
     nomeDoTemplo: "Washington D.C.",
     localizacao: "Kensington, Maryland, Estados Unidos",
     consagracao: "1974, 19 de novembro",
     area: 156558,
-    urlDaImagem: "imagens/washington_dc.jpg"
+    urlDaImagem: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/washington-dc/400x250/washington_dc_temple-exterior-2.jpeg"
   },
   {
     nomeDoTemplo: "Lima Peru",
     localizacao: "Lima, Peru",
     consagracao: "1986, 10 de janeiro",
     area: 9600,
-    urlDaImagem: "imagens/lima_peru.jpg"
+    urlDaImagem: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/lima-peru/400x250/lima-peru-temple-evening-1075606-wallpaper.jpg"
   },
   {
-    nomeDoTemplo: "Cidade do México",
+    nomeDoTemplo: "Cidade do México, México",
     localizacao: "Cidade do México, México",
     consagracao: "1983, 2 de dezembro",
     area: 116642,
-    urlDaImagem: "imagens/cidade_mexico.jpg"
+    urlDaImagem: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/mexico-city-mexico/400x250/mexico-city-temple-exterior-1518361-wallpaper.jpg"
   },
   {
     nomeDoTemplo: "São Paulo Brasil",
@@ -113,6 +113,7 @@ function exibirTemplos(listaDeTemplos) {
         img.alt = templo.nomeDoTemplo;
         img.width = 400;
         img.height = 250;
+        img.decoding = "async";
 
         if (index === 0) {
             img.fetchPriority = "high";
@@ -121,20 +122,31 @@ function exibirTemplos(listaDeTemplos) {
         }
 
         const figcaption = document.createElement("figcaption");
-        figcaption.innerHTML = `
-            ${templo.nomeDoTemplo}<br>
-            <small>LOCALIZAÇÃO: ${templo.localizacao}</small><br>
-            <small>DEDICADO: ${templo.consagracao}</small><br>
-            <small>TAMANHO: ${templo.area} pés quadrados</small>
-        `;
+        
+        const nomeEl = document.createElement("strong");
+        nomeEl.textContent = templo.nomeDoTemplo;
+        figcaption.appendChild(nomeEl);
+        figcaption.appendChild(document.createElement("br"));
+
+        const locEl = document.createElement("small");
+        locEl.textContent = `LOCALIZAÇÃO: ${templo.localizacao}`;
+        figcaption.appendChild(locEl);
+        figcaption.appendChild(document.createElement("br"));
+
+        const dedEl = document.createElement("small");
+        dedEl.textContent = `DEDICADO: ${templo.consagracao}`;
+        figcaption.appendChild(dedEl);
+        figcaption.appendChild(document.createElement("br"));
+
+        const tamEl = document.createElement("small");
+        tamEl.textContent = `TAMANHO: ${templo.area} pés quadrados`;
+        figcaption.appendChild(tamEl);
 
         figure.appendChild(img);
         figure.appendChild(figcaption);
         resgrid.appendChild(figure);
     });
 }
-
-exibirTemplos(templos);
 
 const menuLinks = document.querySelectorAll("nav a");
 
