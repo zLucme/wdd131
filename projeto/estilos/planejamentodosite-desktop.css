@@ -47,6 +47,7 @@ h2 {
 
 h3 {
     font-size: 1.2rem;
+    margin-top: 20px;
 }
 
 p, ul {
@@ -104,22 +105,24 @@ p, ul {
 .wf-header {
     display: flex;
     justify-content: space-between;
-    border-bottom: 1px solid #adb5bd;
+    border-bottom: 1px solid #6c757d;
     padding-bottom: 6px;
     margin-bottom: 6px;
     font-size: 11px;
-    color: #495057;
+    color: #212529;
+    font-weight: 600;
 }
 
 .wf-header-desk {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid #adb5bd;
+    border-bottom: 1px solid #6c757d;
     padding-bottom: 8px;
     margin-bottom: 8px;
     font-size: 12px;
-    color: #495057;
+    color: #212529;
+    font-weight: 600;
 }
 
 .wf-menu-list {
@@ -128,34 +131,38 @@ p, ul {
     background-color: #e9ecef;
     padding: 4px;
     margin-bottom: 6px;
-    border: 1px solid #ced4da;
-    color: #495057;
+    border: 1px solid #495057;
+    color: #212529;
+    font-weight: 600;
 }
 
 .wf-box-sketch {
-    border: 1px dashed #6c757d;
+    border: 1px dashed #495057;
     background-color: #f8f9fa;
     text-align: center;
     padding: 15px 5px;
     margin: 6px 0;
     font-size: 11px;
-    color: #6c757d;
+    color: #212529;
+    font-weight: 600;
 }
 
 .wf-footer {
-    border-top: 1px solid #adb5bd;
+    border-top: 1px solid #6c757d;
     padding-top: 6px;
     margin-top: 8px;
     text-align: center;
     font-size: 10px;
-    color: #495057;
+    color: #212529;
+    font-weight: 600;
 }
 
 .wf-nav {
     display: flex;
     gap: 10px;
     font-size: 11px;
-    color: #495057;
+    color: #212529;
+    font-weight: 600;
 }
 
 .wf-main-grid {

@@ -46,6 +46,7 @@ h2 {
 
 h3 {
     font-size: 1rem;
+    margin-top: 15px;
 }
 
 p, ul {
@@ -82,9 +83,18 @@ p, ul {
     margin-top: 10px;
 }
 
-.wf-mobile, .wf-desktop {
+.wf-mobile {
     width: 100%;
     max-width: 260px;
+    border: 2px solid #6c757d;
+    border-radius: 8px;
+    padding: 10px;
+    background-color: #ffffff;
+}
+
+.wf-desktop {
+    width: 100%;
+    max-width: 320px;
     border: 2px solid #6c757d;
     border-radius: 8px;
     padding: 10px;
@@ -95,11 +105,12 @@ p, ul {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid #adb5bd;
+    border-bottom: 1px solid #6c757d;
     padding-bottom: 5px;
     margin-bottom: 5px;
     font-size: 10px;
-    color: #495057;
+    color: #212529;
+    font-weight: 600;
 }
 
 .wf-menu-list {
@@ -108,34 +119,38 @@ p, ul {
     background-color: #e9ecef;
     padding: 4px;
     margin-bottom: 5px;
-    border: 1px solid #ced4da;
-    color: #495057;
+    border: 1px solid #495057;
+    color: #212529;
+    font-weight: 600;
 }
 
 .wf-box-sketch {
-    border: 1px dashed #6c757d;
+    border: 1px dashed #495057;
     background-color: #f8f9fa;
     text-align: center;
     padding: 12px 5px;
     margin: 5px 0;
     font-size: 10px;
-    color: #6c757d;
+    color: #212529;
+    font-weight: 600;
 }
 
 .wf-footer {
-    border-top: 1px solid #adb5bd;
+    border-top: 1px solid #6c757d;
     padding-top: 5px;
     margin-top: 6px;
     text-align: center;
     font-size: 9px;
-    color: #495057;
+    color: #212529;
+    font-weight: 600;
 }
 
 .wf-nav {
     display: flex;
     gap: 4px;
     font-size: 9px;
-    color: #495057;
+    color: #212529;
+    font-weight: 600;
 }
 
 .wf-main-grid {
