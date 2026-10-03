@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Lucas Mendes de Araújo">
     <meta name="description" content="Formulário de avaliação de produtos tecnológico e responsivo.">
     <title>Formulário de Avaliação de Produto</title>
     <link rel="stylesheet" href="estilos/formulario.css" media="(max-width: 768px)">
@@ -24,11 +25,11 @@
             <div class="form-group">
                 <label>Classificação Geral</label>
                 <div class="rating-group">
-                    <label><input type="radio" name="classificacao" value="1" required> 1</label>
-                    <label><input type="radio" name="classificacao" value="2"> 2</label>
-                    <label><input type="radio" name="classificacao" value="3"> 3</label>
-                    <label><input type="radio" name="classificacao" value="4"> 4</label>
-                    <label><input type="radio" name="classificacao" value="5"> 5</label>
+                    <label for="class-1"><input type="radio" id="class-1" name="classificacao" value="1" required> 1</label>
+                    <label for="class-2"><input type="radio" id="class-2" name="classificacao" value="2"> 2</label>
+                    <label for="class-3"><input type="radio" id="class-3" name="classificacao" value="3"> 3</label>
+                    <label for="class-4"><input type="radio" id="class-4" name="classificacao" value="4"> 4</label>
+                    <label for="class-5"><input type="radio" id="class-5" name="classificacao" value="5"> 5</label>
                 </div>
             </div>
 
@@ -40,10 +41,10 @@
             <div class="form-group">
                 <label>Quais recursos você achou úteis no produto? <span class="subtext">(Marque todos que se aplicam)</span></label>
                 <div class="checkbox-group">
-                    <label><input type="checkbox" name="recursos" value="Durabilidade"> Durabilidade</label>
-                    <label><input type="checkbox" name="recursos" value="Facilidade de Uso"> Facilidade de Uso</label>
-                    <label><input type="checkbox" name="recursos" value="Desempenho"> Desempenho</label>
-                    <label><input type="checkbox" name="recursos" value="Design"> Design</label>
+                    <label for="rec-durabilidade"><input type="checkbox" id="rec-durabilidade" name="recursos" value="Durabilidade"> Durabilidade</label>
+                    <label for="rec-facilidade"><input type="checkbox" id="rec-facilidade" name="recursos" value="Facilidade de Uso"> Facilidade de Uso</label>
+                    <label for="rec-desempenho"><input type="checkbox" id="rec-desempenho" name="recursos" value="Desempenho"> Desempenho</label>
+                    <label for="rec-design"><input type="checkbox" id="rec-design" name="recursos" value="Design"> Design</label>
                 </div>
             </div>
 
