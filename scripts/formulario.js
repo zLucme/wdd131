@@ -18,8 +18,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const spanModificacao = document.getElementById("ultima-modificacao");
     if (spanModificacao) {
-        const agora = new Date();
-        const dataFormatada = agora.toLocaleDateString("pt-BR") + " " + agora.toLocaleTimeString("pt-BR");
-        spanModificacao.textContent = "Última Modificação: " + dataFormatada;
+        spanModificacao.textContent = "Última Modificação: " + document.lastModified;
     }
 });
