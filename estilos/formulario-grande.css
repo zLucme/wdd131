@@ -63,6 +63,7 @@
         border-radius: 8px;
         font-size: 1rem;
         background-color: #f8fafc;
+        resize: vertical;
         transition: all 0.2s ease-in-out;
     }
 

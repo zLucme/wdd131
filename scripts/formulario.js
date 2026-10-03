@@ -1,8 +1,29 @@
 const produtos = [
-    { id: "p1", nome: "Drone Phantom X" },
-    { id: "p2", nome: "Câmera de Ação 4K" },
-    { id: "p3", nome: "Estabilizador Gimbal Pro" },
-    { id: "p4", nome: "Óculos FPV Vision" }
+    {
+        id: "fc-1888",
+        nome: "capacitor de fluxo",
+        classificacaomedia: 4.5
+    },
+    {
+        id: "fc-2050",
+        nome: "fios elétricos",
+        classificacaomedia: 4.7
+    },
+    {
+        id: "fs-1987",
+        nome: "circuitos de tempo",
+        classificacaomedia: 3.5
+    },
+    {
+        id: "ac-2000",
+        nome: "reator de baixa tensão",
+        classificacaomedia: 3.9
+    },
+    {
+        id: "jj-1969",
+        nome: "equalizador de distorção",
+        classificacaomedia: 5.0
+    }
 ];
 
 document.addEventListener("DOMContentLoaded", () => {
