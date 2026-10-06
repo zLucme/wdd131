@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Lucas Mendes de Araújo">
+    <meta name="description" content="Formulário de avaliação de produto tecnológico e responsivo.">
+    <title>Formulário de Avaliação de Produto</title>
+    <link rel="stylesheet" href="estilos/formulario.css" media="(max-width: 768px)">
+    <link rel="stylesheet" href="estilos/formulario-grande.css" media="(min-width: 769px)">
+    <script src="scripts/formulario.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Avaliação do Produto</h1>
+    </header>
+    <main>
+        <form action="avaliacao.html" method="get">
+            <div class="form-group">
+                <label for="produto">Nome do Produto</label>
+                <select id="produto" name="produto" required>
+                    <option value="" disabled selected>Selecione um Produto...</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Classificação Geral</label>
+                <div class="rating-group">
+                    <label for="class-1"><input type="radio" id="class-1" name="classificacao" value="1" required> 1</label>
+                    <label for="class-2"><input type="radio" id="class-2" name="classificacao" value="2" required> 2</label>
+                    <label for="class-3"><input type="radio" id="class-3" name="classificacao" value="3" required> 3</label>
+                    <label for="class-4"><input type="radio" id="class-4" name="classificacao" value="4" required> 4</label>
+                    <label for="class-5"><input type="radio" id="class-5" name="classificacao" value="5" required> 5</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="data-instalacao">Data de Instalação</label>
+                <input type="date" id="data-instalacao" name="data_instalacao" required>
+            </div>
+
+            <div class="form-group">
+                <label>Quais recursos você achou úteis no produto? <span class="subtext">(Marque todos que se aplicam)</span></label>
+                <div class="checkbox-group">
+                    <label for="rec-durabilidade"><input type="checkbox" id="rec-durabilidade" name="recursos" value="Durabilidade"> Durabilidade</label>
+                    <label for="rec-facilidade"><input type="checkbox" id="rec-facilidade" name="recursos" value="Facilidade de Uso"> Facilidade de Uso</label>
+                    <label for="rec-desempenho"><input type="checkbox" id="rec-desempenho" name="recursos" value="Desempenho"> Desempenho</label>
+                    <label for="rec-design"><input type="checkbox" id="rec-design" name="recursos" value="Design"> Design</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="avaliacao-escrita">Avaliação Escrita <span class="optional">(Opcional)</span></label>
+                <textarea id="avaliacao-escrita" name="avaliacao_escrita" rows="4"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="nome-usuario">Seu Nome <span class="optional">(Opcional)</span></label>
+                <input type="text" id="nome-usuario" name="nome_usuario">
+            </div>
+
+            <button type="submit">Publicar Avaliação</button>
+        </form>
+    </main>
+    <footer>
+        <p>&copy; 2026 | 🖥️ Lucas Mendes de Araújo 🖥️ | Monte Mor, São Paulo - Brasil</p>
+        <p id="ultima-modificacao"></p>
+    </footer>
+</body>
+</html>

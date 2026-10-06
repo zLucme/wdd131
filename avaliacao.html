@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Lucas Mendes de Araújo">
+    <meta name="description" content="Página de confirmação de envio da avaliação de produto.">
+    <title>Confirmação de Avaliação</title>
+    <link rel="stylesheet" href="estilos/formulario.css" media="(max-width: 768px)">
+    <link rel="stylesheet" href="estilos/formulario-grande.css" media="(min-width: 769px)">
+</head>
+<body>
+    <header>
+        <h1>Obrigado pela sua Avaliação!</h1>
+    </header>
+    <main class="confirmation-container">
+        <p>Sua avaliação foi enviada com sucesso.</p>
+        <p>Total de avaliações concluídas: <span id="contador-avaliacoes">0</span></p>
+        <a href="formulario.html" class="btn-voltar">Enviar Nova Avaliação</a>
+    </main>
+    <footer>
+        <p>&copy; 2026 | 🖥️ Lucas Mendes de Araújo 🖥️ | Monte Mor, São Paulo - Brasil</p>
+    </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            let total = localStorage.getItem("totalAvaliacoes") || 0;
+            total = parseInt(total) + 1;
+            localStorage.setItem("totalAvaliacoes", total);
+            const contadorElemento = document.getElementById("contador-avaliacoes");
+            if (contadorElemento) {
+                contadorElemento.textContent = total;
+            }
+        });
+    </script>
+</body>
+</html>

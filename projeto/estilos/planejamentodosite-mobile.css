@@ -1,0 +1,159 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.5;
+    color: #333;
+    width: 100%;
+    padding: 10px;
+    background-color: #f4f6f8;
+}
+
+header {
+    background-color: #1b263b;
+    color: #ffffff;
+    padding: 15px;
+    text-align: center;
+    border-radius: 6px;
+}
+
+header h1 {
+    font-size: 1.3rem;
+}
+
+header p {
+    font-size: 0.85rem;
+}
+
+section {
+    background: #ffffff;
+    margin: 15px 0;
+    padding: 15px;
+    border-radius: 6px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+h2 {
+    color: #1b263b;
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 4px;
+    font-size: 1.2rem;
+}
+
+h3 {
+    font-size: 1rem;
+    margin-top: 15px;
+}
+
+p, ul {
+    font-size: 0.95rem;
+    margin-top: 8px;
+}
+
+.color-box {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    vertical-align: middle;
+    margin-right: 8px;
+    border: 1px solid #ccc;
+}
+
+.color-dark {
+    background-color: #1b263b;
+}
+
+.color-cyan {
+    background-color: #00b4d8;
+}
+
+.color-light {
+    background-color: #f4f6f8;
+}
+
+.wf-container-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.wf-mobile {
+    width: 100%;
+    max-width: 260px;
+    border: 2px solid #6c757d;
+    border-radius: 8px;
+    padding: 10px;
+    background-color: #ffffff;
+}
+
+.wf-desktop {
+    width: 100%;
+    max-width: 320px;
+    border: 2px solid #6c757d;
+    border-radius: 8px;
+    padding: 10px;
+    background-color: #ffffff;
+}
+
+.wf-header, .wf-header-desk {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #6c757d;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+    font-size: 10px;
+    color: #212529;
+    font-weight: 600;
+}
+
+.wf-menu-list {
+    font-size: 9px;
+    text-align: center;
+    background-color: #e9ecef;
+    padding: 4px;
+    margin-bottom: 5px;
+    border: 1px solid #495057;
+    color: #212529;
+    font-weight: 600;
+}
+
+.wf-box-sketch {
+    border: 1px dashed #495057;
+    background-color: #f8f9fa;
+    text-align: center;
+    padding: 12px 5px;
+    margin: 5px 0;
+    font-size: 10px;
+    color: #212529;
+    font-weight: 600;
+}
+
+.wf-footer {
+    border-top: 1px solid #6c757d;
+    padding-top: 5px;
+    margin-top: 6px;
+    text-align: center;
+    font-size: 9px;
+    color: #212529;
+    font-weight: 600;
+}
+
+.wf-nav {
+    display: flex;
+    gap: 4px;
+    font-size: 9px;
+    color: #212529;
+    font-weight: 600;
+}
+
+.wf-main-grid {
+    display: flex;
+    gap: 4px;
+}

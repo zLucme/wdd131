@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Planejamento e especificação estrutural do site AeroDrone, contendo escopo, cenários, paleta de cores, tipografia e wireframes.">
+    <title>Planejamento do Site - AeroDrone</title>
+    <link rel="stylesheet" href="estilos/planejamentodosite-mobile.css">
+    <link rel="stylesheet" href="estilos/planejamentodosite-desktop.css">
+</head>
+<body>
+
+    <header>
+        <h1>Planejamento do Projeto: AeroDrone</h1>
+        <p>Documento de especificação e design estrutural do site</p>
+    </header>
+
+    <main>
+        <section>
+            <h2>1. Nome do Site e Logotipo</h2>
+            <p><strong>Nome escolhido:</strong> AeroDrone - Portal de Pilotagem e Tecnologia.</p>
+            <p><strong>Motivo da escolha:</strong> Este nome representa um espaço voltado para a difusão de conhecimento técnico sobre drones, unindo a minha formação prática como piloto pelo SENAI com o desenvolvimento web. (Disponibilidade de domínio opcional: <em>aerodrone.org</em>).</p>
+            <div style="text-align: center; margin-top: 20px;">
+                <p><strong>Logotipo Oficial do Site:</strong></p>
+                <img src="imagens/aerodrone.jpg" alt="Logotipo circular oficial da marca AeroDrone representando tecnologia e aviação de drones" style="max-width: 180px; border-radius: 50%; border: 2px solid #1b263b; padding: 4px; margin-top: 8px;">
+            </div>
+        </section>
+
+        <section>
+            <h2>2. Finalidade do Site</h2>
+            <p>O site tem como escopo fornecer um centro de informações e recursos práticos para entusiastas e profissionais de drones. O portal oferecerá conteúdos sobre regulamentação de voo, dicas de manutenção e uma ferramenta interativa em JavaScript para cálculo de autonomia de bateria e parâmetros de pilotagem.</p>
+        </section>
+
+        <section>
+            <h2>3. Cenários</h2>
+            <p>O público-alvo do site colocará questões como as seguintes:</p>
+            <ul>
+                <li>"Como posso calcular o tempo estimado de voo da bateria do meu drone antes de decolar?"</li>
+                <li>"Quais são as principais normas de segurança e regulamentação exigidas para pilotar drones?"</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>4. Esquema de Cores</h2>
+            <p>O esquema de cores foi escolhido para transmitir uma identidade visual moderna, tecnológica e segura:</p>
+            <ul>
+                <li><span class="color-box color-dark"></span><strong>Azul Escuro (#1b263b):</strong> Usado no cabeçalho, rodapé e títulos principais para transmitir profissionalismo e seriedade.</li>
+                <li><span class="color-box color-cyan"></span><strong>Azul Ciano (#00b4d8):</strong> Usado em destaques, botões de ação (CTA) e links para atrair a atenção do usuário.</li>
+                <li><span class="color-box color-light"></span><strong>Cinza Claro (#f4f6f8):</strong> Usado como cor de fundo geral da página para garantir uma leitura confortável.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>5. Tipografia</h2>
+            <p>Foram selecionadas fontes limpas e legíveis para garantir uma boa experiência de leitura em diferentes dispositivos:</p>
+            <ul>
+                <li><strong>Segoe UI:</strong> Aplicada aos títulos principais e subtítulos (`h1`, `h2`, `h3`) para conferir um aspecto moderno.</li>
+                <li><strong>Verdana / Sans-serif:</strong> Aplicada ao corpo do texto e parágrafos para assegurar excelente legibilidade em telas digitais.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>6. Wireframes de Todas as Páginas (Mobile e Desktop)</h2>
+            <p>Abaixo estão representados os esquemas estruturais convencionais para cada uma das páginas do portal.</p>
+            
+            <h3>Página 1: Início (Home)</h3>
+            <div class="wf-container-grid">
+                <div class="wf-mobile" role="region" aria-label="Wireframe Mobile da página Início">
+                    <div class="wf-header"><span>Logotipo</span><span>[ ☰ ]</span></div>
+                    <div class="wf-menu-list">Início | Sobre | Regras | Contato</div>
+                    <div class="wf-box-sketch">Banner Principal / Destaque</div>
+                    <div class="wf-box-sketch">Resumo dos Tópicos do Site</div>
+                    <div class="wf-box-sketch">Ferramenta Interativa (Calculadora JS)</div>
+                    <div class="wf-footer">Rodapé</div>
+                </div>
+                <div class="wf-desktop" role="region" aria-label="Wireframe Desktop da página Início">
+                    <div class="wf-header-desk">
+                        <span>Logotipo</span>
+                        <div class="wf-nav"><span>Início</span><span>Sobre</span><span>Regulamentação</span><span>Contato</span></div>
+                    </div>
+                    <div class="wf-box-sketch">Banner Principal de Boas-Vindas</div>
+                    <div class="wf-main-grid">
+                        <div class="wf-box-sketch" style="flex: 2;">Apresentação do Portal e Missão</div>
+                        <div class="wf-box-sketch" style="flex: 1;">Acessos Rápidos</div>
+                    </div>
+                    <div class="wf-box-sketch">Ferramenta Interativa de Autonomia de Voo</div>
+                    <div class="wf-footer">Rodapé Completo</div>
+                </div>
+            </div>
+
+            <h3 style="margin-top: 40px;">Página 2: Sobre (About Us)</h3>
+            <div class="wf-container-grid">
+                <div class="wf-mobile" role="region" aria-label="Wireframe Mobile da página Sobre">
+                    <div class="wf-header"><span>Logotipo</span><span>[ ☰ ]</span></div>
+                    <div class="wf-menu-list">Início | Sobre | Regras | Contato</div>
+                    <div class="wf-box-sketch">Título: Sobre o Projeto</div>
+                    <div class="wf-box-sketch">História e Formação SENAI</div>
+                    <div class="wf-box-sketch">Missão, Visão e Valores</div>
+                    <div class="wf-footer">Rodapé</div>
+                </div>
+                <div class="wf-desktop" role="region" aria-label="Wireframe Desktop da página Sobre">
+                    <div class="wf-header-desk">
+                        <span>Logotipo</span>
+                        <div class="wf-nav"><span>Início</span><span>Sobre</span><span>Regulamentação</span><span>Contato</span></div>
+                    </div>
+                    <div class="wf-box-sketch">Título da Página: Sobre o Criador e o AeroDrone</div>
+                    <div class="wf-main-grid">
+                        <div class="wf-box-sketch" style="flex: 2;">Detalhes da Formação como Piloto de Drone pelo SENAI e Motivação Web</div>
+                        <div class="wf-box-sketch" style="flex: 1;">Foto / Ilustração do Desenvolvedor</div>
+                    </div>
+                    <div class="wf-footer">Rodapé Completo</div>
+                </div>
+            </div>
+
+            <h3 style="margin-top: 40px;">Página 3: Regulamentação e Dicas</h3>
+            <div class="wf-container-grid">
+                <div class="wf-mobile" role="region" aria-label="Wireframe Mobile da página Regulamentação">
+                    <div class="wf-header"><span>Logotipo</span><span>[ ☰ ]</span></div>
+                    <div class="wf-menu-list">Início | Sobre | Regras | Contato</div>
+                    <div class="wf-box-sketch">Título: Normas de Voo</div>
+                    <div class="wf-box-sketch">Lista de Leis e Cuidados de Bateria</div>
+                    <div class="wf-box-sketch">Checklist de Segurança</div>
+                    <div class="wf-footer">Rodapé</div>
+                </div>
+                <div class="wf-desktop" role="region" aria-label="Wireframe Desktop da página Regulamentação">
+                    <div class="wf-header-desk">
+                        <span>Logotipo</span>
+                        <div class="wf-nav"><span>Início</span><span>Sobre</span><span>Regulamentação</span><span>Contato</span></div>
+                    </div>
+                    <div class="wf-box-sketch">Título: Regulamentação e Melhores Práticas de Pilotagem</div>
+                    <div class="wf-main-grid">
+                        <div class="wf-box-sketch" style="flex: 2;">Guia Completo de Normas e Homologação de Drones</div>
+                        <div class="wf-box-sketch" style="flex: 1;">Dicas Rápidas de Manutenção</div>
+                    </div>
+                    <div class="wf-footer">Rodapé Completo</div>
+                </div>
+            </div>
+
+            <h3 style="margin-top: 40px;">Página 4: Contato</h3>
+            <div class="wf-container-grid">
+                <div class="wf-mobile" role="region" aria-label="Wireframe Mobile da página Contato">
+                    <div class="wf-header"><span>Logotipo</span><span>[ ☰ ]</span></div>
+                    <div class="wf-menu-list">Início | Sobre | Regras | Contato</div>
+                    <div class="wf-box-sketch">Título: Fale Conosco</div>
+                    <div class="wf-box-sketch">Formulário (Nome, E-mail, Mensagem)</div>
+                    <div class="wf-box-sketch">Botão [ Enviar ]</div>
+                    <div class="wf-footer">Rodapé</div>
+                </div>
+                <div class="wf-desktop" role="region" aria-label="Wireframe Desktop da página Contato">
+                    <div class="wf-header-desk">
+                        <span>Logotipo</span>
+                        <div class="wf-nav"><span>Início</span><span>Sobre</span><span>Regulamentação</span><span>Contato</span></div>
+                    </div>
+                    <div class="wf-box-sketch">Título: Entre em Contato com a Equipe AeroDrone</div>
+                    <div class="wf-main-grid">
+                        <div class="wf-box-sketch" style="flex: 1;">Formulário de Mensagem (Campos de Texto)</div>
+                        <div class="wf-box-sketch" style="flex: 1;">Informações de Suporte e Redes Sociais</div>
+                    </div>
+                    <div class="wf-footer">Rodapé Completo</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+</body>
+</html>
