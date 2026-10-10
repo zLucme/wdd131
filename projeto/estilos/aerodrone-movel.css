@@ -486,3 +486,23 @@ footer {
     color: orange;
     font-weight: bold;
 }
+
+@media (max-width: 768px) {
+    .grid-index {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .flex-column:nth-child(2) {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .flex-column:nth-child(2) .card.card-dark-top {
+        order: 2;
+    }
+
+    .flex-column:nth-child(2) .card.card-cyan-top {
+        order: 1;
+    }
+}
