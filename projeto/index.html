@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="AeroDrone - Portal de referência em pilotagem de drones, normas ANAC/DECEA, planejamento de missões e gestão de baterias LiPo.">
     <title>AeroDrone - Portal de Pilotagem e Tecnologia</title>
+    <link rel="preload" as="image" href="imagens/aerodrone.jpg">
     <link rel="stylesheet" href="estilos/aerodrone-movel.css">
     <link rel="stylesheet" href="estilos/aerodrone-desktop.css" media="(min-width: 769px)">
 </head>
@@ -125,7 +126,7 @@
 
                 <div class="card card-cyan-top">
                     <div class="drone-gif-wrapper">
-                        <img src="imagens/aerodrone.webp" alt="Animação de drone em voo" class="drone-gif" width="280" height="158">
+                        <img src="imagens/aerodrone.webp" alt="Animação de drone em voo" class="drone-gif" width="280" height="158" loading="lazy">
                     </div>
                     <h2 class="section-title">Relatório e Fiscalização</h2>
                     <div id="resultado-calculo" class="resultado-box">
@@ -139,12 +140,12 @@
     <footer>
         <p>&copy; 2026 AeroDrone - Todos os direitos reservados.</p>
         <div class="footer-socials">
-            <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="Perfil LinkedIn do AeroDrone"><img src="imagens/linkedin-square.svg" alt="LinkedIn" width="24" height="24"></a>
-            <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Página Facebook do AeroDrone"><img src="imagens/facebook-square.svg" alt="Facebook" width="24" height="24"></a>
-            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Perfil Instagram do AeroDrone"><img src="imagens/instagram-square.svg" alt="Instagram" width="24" height="24"></a>
+            <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="Perfil LinkedIn do AeroDrone"><img src="imagens/linkedin-square.svg" alt="LinkedIn" width="24" height="24" loading="lazy"></a>
+            <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Página Facebook do AeroDrone"><img src="imagens/facebook-square.svg" alt="Facebook" width="24" height="24" loading="lazy"></a>
+            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Perfil Instagram do AeroDrone"><img src="imagens/instagram-square.svg" alt="Instagram" width="24" height="24" loading="lazy"></a>
         </div>
     </footer>
 
-    <script src="scripts/aerodrone.js"></script>
+    <script src="scripts/aerodrone.js" defer></script>
 </body>
 </html>
