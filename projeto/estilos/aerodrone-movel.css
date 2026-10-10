@@ -199,7 +199,7 @@ main {
 
 .btn {
     background-color: #00b4d8;
-    color: white;
+    color: #0f172a;
     border: none;
     padding: 0.8rem 1.5rem;
     border-radius: 4px;
@@ -214,6 +214,7 @@ main {
 
 .btn:hover {
     background-color: #0096b4;
+    color: #0f172a;
 }
 
 .btn-hero {
