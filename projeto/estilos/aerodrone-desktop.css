@@ -1,0 +1,56 @@
+@media (min-width: 769px) {
+    nav ul {
+        display: flex;
+        position: static;
+        flex-direction: row;
+        background: none;
+        padding: 0;
+        width: auto;
+    }
+
+    nav ul li {
+        margin-left: 1.5rem;
+    }
+
+    #menu-toggle {
+        display: none;
+    }
+
+    main {
+        padding: 3rem 1rem;
+    }
+
+    .grid-index {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 2rem;
+    }
+
+    .grid-contato {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+    }
+
+    .grid-regulamentacao {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 2rem;
+    }
+
+    .grid-sobre {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 2rem;
+    }
+
+    .calculadora-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
+
+    .calculadora-span-2 {
+        grid-column: span 2;
+    }
+}

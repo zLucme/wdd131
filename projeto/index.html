@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AeroDrone - Portal de referência em pilotagem de drones, normas ANAC/DECEA, planejamento de missões e gestão de baterias LiPo.">
+    <title>AeroDrone - Portal de Pilotagem e Tecnologia</title>
+    <link rel="stylesheet" href="estilos/aerodrone-movel.css">
+    <link rel="stylesheet" href="estilos/aerodrone-desktop.css" media="(min-width: 769px)">
+</head>
+<body>
+    <header>
+        <div class="container navbar">
+            <a href="index.html" class="logo">
+                <img src="imagens/aerodrone.jpg" alt="Logotipo oficial AeroDrone" class="logo-img" width="45" height="45"> AeroDrone
+            </a>
+            <nav>
+                <ul id="menu-list">
+                    <li><a href="index.html" class="active">Início</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="regulamentacao.html">Regulamentação</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+                <button id="menu-toggle" aria-label="Abrir menu de navegação">☰</button>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="card hero-section">
+            <h2 class="hero-title">AeroDrone - Portal de Pilotagem e Tecnologia</h2>
+            <p class="hero-text">Centro técnico de referência em operação de aeronaves não tripuladas (VAPs), planejamento de missões aéreas, conformidade legal e gestão avançada de equipamentos.</p>
+            <a href="regulamentacao.html" class="btn btn-hero">Explorar Normas e Regulamentação</a>
+        </section>
+
+        <div class="grid-index">
+            <div class="flex-column">
+                <div class="card">
+                    <h3 class="section-title">Apresentação do Portal e Missão</h3>
+                    <p>O <strong>AeroDrone</strong> consolida diretrizes práticas para entusiastas e operadores profissionais. Nossa missão é promover a segurança operacional no espaço aéreo brasileiro, detalhando protocolos de pré-voo, gestão eficiente de energia em baterias de lítio e conformidade rigorosa com os órgãos reguladores.</p>
+                </div>
+
+                <div class="card">
+                    <h3 class="section-title">Controle de Missão e Rota</h3>
+                    <p class="calculadora-desc">Selecione o modelo do drone e informe os parâmetros operacionais para processar o plano de voo completo.</p>
+                    
+                    <div class="calculadora-grid">
+                        <div class="form-group calculadora-span-2">
+                            <label for="modelo-drone">Parâmetros Operacionais</label>
+                            <select id="modelo-drone">
+                                <option value="">Selecione um modelo...</option>
+                                <optgroup label="DJI - Linha Consumer e Compactos">
+                                    <option value="dji-mini2">DJI Mini 2 / SE</option>
+                                    <option value="dji-mini3">DJI Mini 3 / Mini 3 Pro</option>
+                                    <option value="dji-mini4">DJI Mini 4 Pro</option>
+                                    <option value="dji-air2s">DJI Air 2S</option>
+                                    <option value="dji-air3">DJI Air 3</option>
+                                </optgroup>
+                                <optgroup label="DJI - Linha Professional e Enterprise">
+                                    <option value="phantom4">DJI Phantom 4 Pro / V2.0</option>
+                                    <option value="mavic2-pro">DJI Mavic 2 Pro / Zoom</option>
+                                    <option value="mavic3">DJI Mavic 3 Enterprise / Thermal / Multispectral</option>
+                                    <option value="matrice30">DJI Matrice 30 / 30T</option>
+                                    <option value="matrice300">DJI Matrice 300 RTK / 350 RTK</option>
+                                </optgroup>
+                                <optgroup label="Autel Robotics">
+                                    <option value="autel-nano">Autel EVO Nano+</option>
+                                    <option value="autel-lite">Autel EVO Lite+</option>
+                                    <option value="autel-evo2">Autel EVO II Pro (V2 / V3)</option>
+                                    <option value="autel-max4t">Autel EVO Max 4T</option>
+                                </optgroup>
+                                <optgroup label="Drones Agrícolas e Pesados">
+                                    <option value="dji-agras-t40">DJI Agras T40</option>
+                                    <option value="dji-agras-t50">DJI Agras T50</option>
+                                </optgroup>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="data-missao">Data da Missão:</label>
+                            <input type="date" id="data-missao">
+                        </div>
+                        <div class="form-group">
+                            <label for="consumo-drone">Consumo (mAh/min):</label>
+                            <input type="number" id="consumo-drone" value="100">
+                        </div>
+                        <div class="form-group">
+                            <label for="bateria-drone">Bateria (mAh):</label>
+                            <input type="number" id="bateria-drone" value="5000">
+                        </div>
+                        <div class="form-group">
+                            <label for="decolagem-hora">Decolagem:</label>
+                            <input type="time" id="decolagem-hora" value="16:30">
+                        </div>
+                        <div class="form-group">
+                            <label for="duracao-voo">Duração (min):</label>
+                            <input type="number" id="duracao-voo" value="25">
+                        </div>
+                        <div class="form-group">
+                            <label for="vel-drone">Vel. Drone (m/s):</label>
+                            <input type="number" id="vel-drone" value="15">
+                        </div>
+                        <div class="form-group">
+                            <label for="vel-vento">Vel. Vento (m/s):</label>
+                            <input type="number" id="vel-vento" value="5.0" step="0.1">
+                        </div>
+                        <div class="form-group">
+                            <label for="angulo-vento">Ângulo do Vento (°):</label>
+                            <input type="number" id="angulo-vento" value="90">
+                        </div>
+                    </div>
+                    <button type="button" id="btn-processar" class="btn">Processar Plano de Voo</button>
+                </div>
+            </div>
+
+            <div class="flex-column">
+                <div class="card card-dark-top">
+                    <h3 class="section-title">Acessos Rápidos</h3>
+                    <ul class="quick-links-list">
+                        <li><a href="regulamentacao.html">Normas ANAC e DECEA</a></li>
+                        <li><a href="regulamentacao.html">Cuidados com Baterias LiPo</a></li>
+                        <li><a href="sobre.html">Sobre o Piloto Instrutor</a></li>
+                        <li><a href="contato.html">Suporte Operacional</a></li>
+                    </ul>
+                </div>
+
+                <div class="card card-cyan-top">
+                    <div class="drone-gif-wrapper">
+                        <img src="imagens/aerodrone.gif" alt="Animação de drone em voo" class="drone-gif">
+                    </div>
+                    <h3 class="section-title">Relatório e Fiscalização</h3>
+                    <div id="resultado-calculo" class="resultado-box">
+                        <p class="resultado-placeholder">Aguardando parâmetros para cálculo da missão...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 AeroDrone - Todos os direitos reservados.</p>
+        <div class="footer-socials">
+            <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="Perfil LinkedIn do AeroDrone"><img src="imagens/linkedin-square.svg" alt="LinkedIn" width="24" height="24"></a>
+            <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Página Facebook do AeroDrone"><img src="imagens/facebook-square.svg" alt="Facebook" width="24" height="24"></a>
+            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Perfil Instagram do AeroDrone"><img src="imagens/instagram-square.svg" alt="Instagram" width="24" height="24"></a>
+        </div>
+    </footer>
+
+    <script src="scripts/aerodrone.js"></script>
+</body>
+</html>
