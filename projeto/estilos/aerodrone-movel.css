@@ -494,7 +494,7 @@ footer {
         flex-direction: column;
     }
 
-    .card-links-mobile {
-        order: 99;
+    .grid-regulamentacao > .flex-column:last-child {
+        order: 2;
     }
 }
