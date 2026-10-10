@@ -1,4 +1,23 @@
 document.addEventListener('DOMContentLoaded', () => {
+    const planoSalvo = localStorage.getItem('ultimoPlanoDeVoo');
+    if (planoSalvo) {
+        const dadosPlano = JSON.parse(planoSalvo);
+        const resultadoDiv = document.getElementById('resultado-calculo');
+        if (resultadoDiv) {
+            resultadoDiv.innerHTML = `
+                <div class="resultado-flex">
+                    <p style="color: #026aa2; font-size: 0.85rem; font-weight: bold; margin-bottom: 0.5rem;">🔄 Último plano recuperado da sessão anterior:</p>
+                    <p><strong>Modelo Selecionado:</strong> ${dadosPlano.drone}</p>
+                    <p><strong>Data da Missão:</strong> ${dadosPlano.data}</p>
+                    <p><strong>Autonomia Estimada:</strong> ${dadosPlano.autonomia} minutos</p>
+                    <p><strong>Consumo Estimado do Voo:</strong> ${dadosPlano.consumo} mAh</p>
+                    <p><strong>Vento Registrado:</strong> ${dadosPlano.vento} m/s</p>
+                    <p><strong>Status Segurança:</strong> ${dadosPlano.status}</p>
+                </div>
+            `;
+        }
+    }
+
     const menuToggle = document.getElementById('menu-toggle');
     const menuList = document.getElementById('menu-list');
     
@@ -23,8 +42,40 @@ document.addEventListener('DOMContentLoaded', () => {
         elemento.addEventListener('change', processarPlanoDeVoo);
     });
 
-    if (document.getElementById('modelo-drone')) {
-        processarPlanoDeVoo();
+    const formContato = document.getElementById('form-contato');
+    if (formContato) {
+        formContato.addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const nomeInput = document.getElementById('nome-contato');
+            const nome = nomeInput ? nomeInput.value.split(' ')[0] : 'Usuário';
+            const btnEnviar = this.querySelector('button[type="submit"]');
+            
+            const msgAntiga = document.getElementById('msg-sucesso-form');
+            if (msgAntiga) {
+                msgAntiga.remove();
+            }
+
+            const msgSucesso = document.createElement('p');
+            msgSucesso.id = 'msg-sucesso-form';
+            msgSucesso.style.color = '#166534';
+            msgSucesso.style.fontWeight = 'bold';
+            msgSucesso.style.backgroundColor = '#dcfce7';
+            msgSucesso.style.padding = '10px';
+            msgSucesso.style.borderRadius = '4px';
+            msgSucesso.style.marginBottom = '1rem';
+            msgSucesso.style.textAlign = 'center';
+            msgSucesso.textContent = `✅ Mensagem enviada com sucesso, ${nome}! Entraremos em contato em breve.`;
+
+            this.insertBefore(msgSucesso, btnEnviar);
+            this.reset();
+
+            setTimeout(() => {
+                if (msgSucesso.parentNode) {
+                    msgSucesso.remove();
+                }
+            }, 5000);
+        });
     }
 });
 
@@ -100,6 +151,17 @@ function processarPlanoDeVoo() {
         classeStatus = 'status-erro';
     }
 
+    const relatorioVoo = {
+        drone: modelo,
+        data: dataFormatada,
+        autonomia: autonomiaMaximaMinutos,
+        consumo: consumoTotalEstimado,
+        vento: velVento,
+        status: statusSeguranca
+    };
+
+    localStorage.setItem('ultimoPlanoDeVoo', JSON.stringify(relatorioVoo));
+
     resultadoDiv.innerHTML = `
         <div class="resultado-flex">
             <p><strong>Modelo Selecionado:</strong> ${modelo}</p>
@@ -110,6 +172,7 @@ function processarPlanoDeVoo() {
             <p><strong>Vento Registrado:</strong> ${velVento} m/s (${ventoKmh} km/h) a ${anguloVento}°</p>
             <p class="${classeStatus}">Status: ${statusSeguranca}</p>
             ${alertaNoturno}
+            <p style="font-size: 0.85rem; color: #64748b; margin-top: 0.8rem; border-top: 1px solid #e2e8f0; padding-top: 0.5rem;">💾 Dados salvos automaticamente no navegador.</p>
         </div>
     `;
 }
