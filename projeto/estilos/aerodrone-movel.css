@@ -494,19 +494,7 @@ footer {
         flex-direction: column;
     }
 
-    .grid-index .flex-column:nth-child(2),
-    .grid-regulamentacao .flex-column:nth-child(2) {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .grid-index .flex-column:nth-child(2) .card.card-dark-top,
-    .grid-regulamentacao .flex-column:nth-child(2) .card.card-dark-top {
+    .grid-regulamentacao > .flex-column:last-child {
         order: 2;
-    }
-
-    .grid-index .flex-column:nth-child(2) .card.card-cyan-top,
-    .grid-regulamentacao .flex-column:nth-child(2) .card-dark-top ~ .card {
-        order: 1;
     }
 }
